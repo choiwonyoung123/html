@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>미디어쿼리</title>
+        <style>
+            /* body{
+                background: orange;
+            } */
+            /*card 화면을 세로로 볼 때*/
+            #container{ /*스크린 최대 너비가 768px 미만인 경우*/
+                margin: 0 auto;
+                width: 320px;
+                border: 1px solid #ccc;
+            }
+            img{
+                width: 300px;
+                height: 250px;
+            }
+            .card{
+                position: relative;
+                width: 300px;
+                height: 500px;
+                margin: 10px;
+                border: 1px solid #ccc;
+                background: rgb(208, 240, 193);
+            }
+            .words{
+                text-align: center;
+                position: absolute;
+                left: 35px;
+                top: 300px;
+            }
+            /*card 화면을 가로로 볼 때*/
+            @media screen and (min-width: 768px){ /*스크린 최소 너비가 768px인 경우*/
+                #container{
+                    width: 570px;
+                    margin: 0 auto;
+                    border: 1px solid #ccc;
+                }
+                img{
+                    width: 300px;
+                    height: 250px;
+                }
+                .card{
+                    border: 1px solid #ccc;
+                    margin: 10px;
+                    width: 550px;
+                    height: 250px;
+                    position: relative;
+                }
+                .words{
+                    text-align: center;
+                    width: 250px;
+                    position: absolute;
+                    left: 300px;
+                    top: 70px;
+                }
+            }
+            @media screen and (min-width: 1720px){ /*스크린 최소 너비가 1720px인 경우*/
+                #container{
+                    width: 172.0px;
+                    margin: 0 auto;
+                    overflow: hidden; /*float으로 인해 콘테이너 테두리가 사라지는 것을 정상적으로 보이도록 오버플로우를 숨기기*/
+                }
+                .card{
+                    float: left; /*1720px 이상에서 요소들이 떠서 왼쪽으로 이어 붙도록 float 설정*/
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="h">text node</h1>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/강아지3.jpg" alt="강아지1">
+                <div class="words">
+                    <h3>일분 전만큼 긴 시간은 없다</h3>
+                    <h4>Jim Bishop</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

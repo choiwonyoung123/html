@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>성적처리</title>
+    </head>
+    <body>
+        <h3>성적처리</h3>
+        <script>
+            //문제1- 생성자함수
+            function Student(name, kor, eng, math, art){ //함수명 Student의 생성자함수 정의 
+                //생성자함수 변수 생성
+                this.name = name; 
+                this.kor = kor;
+                this.eng = eng;
+                this.math = math;
+                this.art = art;
+                //프로토타입으로 총점과 평균, 결과를 출력하는 메서드 정의
+                Student.prototype.getSum = function(){
+                    return this.kor + this.eng + this.math + this.art; //총합
+                }
+                Student.prototype.getAvg = function(){
+                    return this.getSum() / 4; //평균
+                }
+                Student.prototype.toResult = function(){
+                    return `${this.name} \t ${this.getSum()} \t ${this.getAvg()}`; //성적 출력
+                }
+            }
+            let studentarr =[]; //학생 배열 생성
+            //생성한 배열에 생성자함수로 학생 객체를 만들어서 배열에 추가
+            studentarr.push(new Student('홍길동', 96, 98, 92, 98));
+            studentarr.push(new Student('성춘향', 88, 74, 78, 92));
+            studentarr.push(new Student('이몽룡', 69, 89, 92, 78));
+            studentarr.push(new Student('임영웅', 97, 95, 89, 98));
+            studentarr.push(new Student('성유리', 66, 80, 92, 94));
+            console.log(studentarr); //학생 배열 출력
+            console.log(`이름\t총점\t평균`);
+            console.log(`=====================`)
+            for(let idx in studentarr){ //학생 배열 전체에 대한 요소들을 출력
+                console.log(studentarr[idx].toResult());
+            }
+            console.log(`=====================`)
+        </script>
+    </body>
+</html>

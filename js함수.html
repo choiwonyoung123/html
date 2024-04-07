@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수</title>
+    </head>
+    <body>
+        <h3>함수</h3>
+        <script>
+            //함수정의: function 함수명 (매개변수) {명령집합}
+            //함수실행(호출): 함수명(인수)
+
+            
+            //1~10까지 합
+            // let result = 0;
+            // for(let i = 1; i <= 10; i++){
+            //     result += i;
+            // }
+            // console.log(`합은 ${result}`);
+            
+
+            //start~end까지 합 구하는 함수
+            // function sum(start, end){
+            //     let result = 0;
+            //     for(let i = start; i <= end; i++){
+            //         result += i;
+            //     }
+            //     return result;
+            // }
+            // console.log(`합은 ${sum(1, 100)}`);
+
+
+            //n팩토리얼을 구하는 함수
+            // function fac(n){
+            //     let result = 1;
+            //     for(let i = 1; i <= n; i++){
+            //         result *= i;
+            //     }
+            //     return result;
+            // }
+            // console.log(`n 팩토리얼의 값은 ${fac(10)}`);
+            // function fac(n){
+            //     let result = 1;
+            //     for(let i = n; i >= 1; i--){
+            //         result *= i;
+            //     }
+            //     return result;
+            // }
+            // console.log(`n 팩토리얼의 값은 ${fac(10)}`);
+
+
+            //화살표함수(이름이 없는 익명함수)
+            // let plus = function(a, b){
+            //     return a + b;
+            // }
+            // console.log(plus(a=0, b=0));
+            // let plus2 = (a, b) => a + b;
+            // console.log(plus2(20, 50));
+
+
+            // //콜백함수
+            // let call = function(){
+            //     console.log('함수호출됨');
+            // }
+            // function callten(funccall){
+            //     for(let i = 1; i <= 10; i++){
+            //         funccall();
+            //     }
+            // }
+            // callten(call);
+
+
+            //클로저함수(실행 종료된 함수의 환경을 기억하는 함수), 지역변수는 클로저 공간에 저장됨, 임의로 변경되지 않도록 보호하고 유지하는 기능
+            // - 익명함수에 필요한 환경 넣어서 리턴
+            //카운터만들기
+            let ins = function(){ //ins()()는 함수를 만들면서 바로 실행하기 때문에 자체 값으로는 return 이후의 값만 남는다.
+                let cnt = 0;
+                return function(){
+                    return ++cnt;
+                }
+            }();
+            console.log(ins()); //ins()함수의 결과 값은 "function(){ return ++cnt; }"이다. 그리고, 이 결과를 "()"로 실행하면 클로저에 저장되어 있던 함수를 실행한다.
+            console.log(ins());
+            console.log(ins());
+            console.log(ins());
+            console.log(ins());
+            console.log(ins());
+            console.log(ins());
+
+
+            //문제1- 배열 최대값 최소값
+            function maxmin(first,...arr){ //arr은 변수명
+                let max = first; //첫번째 값을 max에 저장
+                let min = first; // 첫번째 값을 min에 저장
+                for(let i = 0; i < arr.length; i++){
+                    if(max < arr[i]){ //두번째 값이 더 크면 max에 저장
+                        max = arr[i];
+                    }
+                    if(min > arr[i]){ //두번째 값이 더 작으면 min에 저장
+                        min = arr[i];
+                    }
+                }
+                return `최대값: ${max}, 최소값: ${min}`; //최대값과 최소값 결과 리턴
+            }           
+            let array = [50, 87, -9, 700, 57]; //새로 넣을 배열
+            console.log(maxmin(...array)); //함수 호출
+
+            //문제2 - 성적처리
+            // function sungjuk(a, b, c, d){
+            //     let name = a;
+            //     let ko = b;
+            //     let en = c;
+            //     let ma = d;
+            //     let sum = ko + en + ma;
+            //     let avg = (ko + en + ma) / 3;
+            //     let grade = '';
+            //     if(avg >= 90){
+            //         grade = 'A';
+            //     }
+            //     else{
+            //         grade = 'B';
+            //     }
+            //     return `${name}  ${sum}  ${avg}  ${grade}`;
+            // }
+            // console.log(`이름 총점 평균 등급`);
+            // console.log(sungjuk('aaa', 90, 91, 92));
+            // console.log(sungjuk('bbb', 50, 60, 92));
+            // console.log(sungjuk('ccc', 90, 91, 92));
+            function sungjuk(name, ko, en, ma){
+                let sum = ko + en + ma;
+                let avg = Math.round(sum / 3);
+                let grade = '';
+                switch(Math.floor(avg / 10)){
+                    case 10: grade = 'A+'; break;
+                    case 9: grade = 'A'; break;
+                    case 8: grade = 'B'; break;
+                    case 7: grade = 'C'; break;
+                    case 6: grade = 'D'; break;
+                    default: grade = 'E';
+                }
+                return `${name} \t ${sum} \t ${avg} \t ${grade}`;
+            }
+            console.log(`이름\t총점\t평균\t등급`);
+            console.log(sungjuk('aaa', 90, 90, 90));
+            console.log(sungjuk('bbb', 96, 80, 66));
+            console.log(sungjuk('ccc', 72, 82, 72));
+            </script>
+    </body>
+</html>

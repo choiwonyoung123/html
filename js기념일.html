@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>기념일계산</title>
+        <style>
+            #container{
+                width: 400px;
+                margin: 0 auto;
+                border: 1px solid #ccc;
+            }
+            #acc{
+                text-align: center;
+            }
+            #acc h4{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: pink;
+                margin: 0 auto;
+                line-height: 100px;
+            }
+            h3{
+                background: black;
+                color: white;
+                padding: 10px;
+            }
+            #day{
+                padding: 20px;
+            }
+            #day ul{
+                border-bottom: 1px solid #ccc;
+                list-style: none;
+                overflow: hidden;
+                padding-bottom: 20px;
+                font-weight: bold; 
+            }
+            #day ul li:first-Child{
+                float: left;
+            }
+            #day ul li:last-Child{
+                float: right;
+            }
+            /* ul li{
+                width: 140px;
+            } */
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="acc">
+                <h1>우리 만난 지</h1>
+                <h4 id="accent"></h4>
+            </div>
+            <h3>기념일 계산</h3>
+            <div id="day">
+                <ul>
+                    <li>100일</li>
+                    <li id="date100"></li>
+                </ul>
+                <ul>
+                    <li>200일</li>
+                    <li id="date200"></li>
+                </ul>
+                <ul>
+                    <li>1년</li>
+                    <li id="date365"></li>
+                </ul>
+                <ul>
+                    <li>500일</li>
+                    <li id="date500"></li>
+                </ul>
+            </div>
+        </div>
+        <script> //자바스크립트 DOM 웹요소
+            let now = new Date(); //날짜객체 생성
+            let firstDay = new Date('2023-12-19'); //날짜객체 생성
+            let passDay = Math.floor((now - firstDay) / 1000 / 60 / 60 / 24); //날짜간격 계산
+            document.querySelector('#accent').innerHTML = passDay +'일'; //id가 accent인 선택자 > 웹문서에 작성 > 날짜간격 삽입
+            function futureDay(day){ //미래의 날짜 계산 함수
+                let dday = new Date(2023, 11, 19+day); //날짜객체 생성
+                // console.log(dday);
+                let year = dday.getFullYear(); //2023-12-19일의 년도
+                let month = dday.getMonth() + 1; //2023-12-19일의 월
+                let date = dday.getDate(); //2023-12-19일의 날짜
+                let result = `${year}년 ${(month >=10) ? month : 0+month}월 ${(date >= 10) ? date : 0+date}일`; //결과 출력
+                document.querySelector('#date'+day).innerHTML = result;
+            }
+            futureDay(100)
+            futureDay(200)
+            futureDay(365)
+            futureDay(500)
+        </script>
+    </body>
+</html>

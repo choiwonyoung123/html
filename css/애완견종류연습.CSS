@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+#container{ /*콘테이너스타일*/
+    width: 960px;
+    margin: 0 auto;
+    /* background: url(img/앤.jpg) no-repeat top center; /*배경 지정*/
+    /* background-size: 960px 300px; 가로 세로 */
+}
+figure{
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+figure img{ /*이미지묶음스타일*/
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 5px solid black;
+    box-shadow: 0px 0px 3px 10px whitesmoke;
+}
+header{ /*헤더스타일*/
+    background-color: blue;
+    /* display: none; */
+}
+nav ul li{
+    display: inline-block; /*인라인or블록 지정*/
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 3px solid #fff;
+    border-radius: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none; /*밑줄 제거*/
+    padding: 10px;
+}
+section ul li{
+    display: inline-block;
+    margin: 10px;
+    border: 5px #ccc;
+    padding: 10px;
+    background-color: pink;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 20px 10px black inset;
+}
+a{
+    text-decoration: none;
+}
+section ul{
+    text-align: center;             
+}
+section p{
+    text-align: right;
+}
+section{ /*섹션스타일*/
+    /* background-color: rgb(204, 31, 247); */
+    font-family: 'Black Han Sans', sans-serif;
+}
+section h2{
+    background: url(img/앤.jpg) no-repeat left center; /*배경 지정*/
+    background-size: 20px 20px;
+    text-indent: 26px; /*텍스트 들여쓰기*/
+}
+article{ /*아티클스타일*/
+    /* background-color: rgba(255, 0, 0, 0.2); */
+    border: 1px solid #ccc;
+    font-family: 'Nanum Brush Script', cursive;
+    background-image: url(img/레드향.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: center;
+}
+aside{ /*어사이드스타일*/
+    /* background-color: rgb(247, 207, 134); */
+    background: repeating-linear-gradient(180deg, blue, blue 10%, green 10%, green 20%);
+}
+footer{ /*푸터스타일*/
+    background-color: rgb(91, 185, 247);
+}

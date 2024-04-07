@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>애니메이션</title>
+        <style>
+            #myball{
+                position: relative;
+                width: 100px;
+                height: 100px;
+                border-radius: 0px; /*처음에 둥근테두리x*/
+                border: 2px solid red;
+                background: url(img/레드향.jpg); /*배경이미지 삽입*/
+                background-size: cover; /*배경이미지 가득차게*/
+                animation-name: myani; /*애니메이션이름 지정*/
+                animation-duration: 3s; /*지속시간 지정*/
+                animation-iteration-count: 3; /*반복 지정*/
+                animation-direction: alternate; /*왕복 지정*/
+                animation-delay: 2s; /*지연시간 지정*/
+            }
+            @keyframes myani{ /*키프레임으로 myani 애니메이션 설정*/
+                0%{
+                    left: 10px; /*왼쪽에서 10px 이동한 지점으로 설정*/
+                }
+                40%{
+                    top: 50px; /*위에서 50px 이동한 지점으로 설정*/
+                    border-radius: 50%; /*테두리 원으로 바꾸기*/
+                    border: 3px solid blue; /*테두리 바꾸기*/
+                    background: url(img/앤.jpg); /*배경이미지 바꾸기*/
+                }
+                100%{
+                    left: 500px; /*왼쪽에서 500px 이동한 지점으로 설정*/
+                }
+            }
+            .yg{
+                width: 100px;
+                height: 100px;
+                background: yellow;
+                transition-duration: 3s; /*트랜지션 지속시간 지정*/
+            }
+            .yg:hover{ 
+                background: green; /*요소에 마우스 올리면 초록색으로 바꾸기*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myball"></div>
+        <div class="yg">색변경</div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>객체</title>
+    </head>
+    <body>
+        <h3>객체</h3>
+        <script>
+            // let subject = {
+            //     ko : 100,
+            //     en : 80,
+            //     ma : 90,
+            //     tot : function(){
+            //         console.log(this.ko + this.en + this.ma);
+            //     }
+            // }
+            // subject.ar = 99;
+            // subject.avg = function(){
+            //     console.log((this.ko + this.en + this.ma) / 3);
+            // }
+            // console.log(subject);
+            // delete subject.ar;;
+            // for(let key in subject){
+            //     console.log(`${key} : ${subject[key]}`);
+            // }
+            // console.log(subject.tot());
+            // console.log(subject.avg());
+
+
+            //문제1 가격출력
+            function Product(name, weight, price){ //생성자 함수 정의
+                this.name = name; //이름속성
+                this.weight = weight; //무게속성
+                this.price = price; //가격속성
+                this.calculate = function(g){ //가격구하는 메소드
+                    return `${g/this.weight*this.price}`; //가격 계산, 기준이 되는 g수 생각
+                }
+                Product.prototype.calculate = function(g){ //프로토타입으로 정의하여 공통으로 사용
+                    return `${g/this.weight*this.price}`;
+                }    
+            }
+            let sam = new Product('삼겹살', 100, 1690); //새로운 객체 생성
+            let so = new Product('소고기', 50, 7000); //새로운 객체 생성
+            console.log(`삼겹살 500g 구매 시 가격은? ${sam.calculate(1000)}원`);
+            console.log(`소고기 600g 구매 시 가격은? ${so.calculate(600)}원`);
+        </script>
+    </body>
+</html>

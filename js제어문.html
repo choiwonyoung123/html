@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>제어문</title>
+    </head>
+    <body>
+        <h1>제어문</h1>
+        <script>
+           //제어문 - 조건문
+
+           //홀수 짝수 구별하기
+            let num = 0;
+            if((num % 2 ) == 0){
+                console.log('짝수');
+            }
+            else{
+                console.log('홀수');
+            }
+            console.log('end');
+
+            //양수 음수 제로 구별하기
+            if(num > 0){
+                console.log('양수');
+            }
+            else if(num < 0){
+                console.log('음수');
+            }
+            else{
+                console.log('제로');
+            }
+
+            //홀수 짝수 제로 구별하기2
+            if(num >= 0){
+                if(num > 0){
+                    console.log('양수');
+                }
+                else{
+                    console.log('제로');
+                }
+            }
+            else{
+                console.log('음수');
+            }
+            console.log('end');
+
+            //평균 점수 구별하기
+            // let ko = Number(prompt("국어점수:"));
+            // let en = Number(prompt("영어점수:"));
+            // let ma = Number(prompt("수학점수:"));
+            // let avg = (ko + en + ma) / 3;
+            // if(avg >= 90){
+            //     console.log(`평균: ${avg}, 평점: 수`);
+            // }
+            // else if(avg >= 80){
+            //     console.log(`평균: ${avg}, 평점: 우`);
+            // }
+            // else if(avg >= 70){
+            //     console.log(`평균: ${avg}, 평점: 미`);
+            // }
+            // else if(avg >= 60){
+            //     console.log(`평균: ${avg}, 평점: 양`);
+            // }
+            // else{
+            //     console.log(`평균: ${avg}, 평점: 가`);
+            // }
+
+            //3의 배수 구별하기, 3의 배수 또는 7의 배수 구별하기
+            // let su = 21;
+            // if((su % 3) == 0){
+            //     console.log('3의 배수이다');
+            // }
+            // else{
+            //     console.log('3의 배수가 아니다');
+            // }
+            // if((su % 3) == 0 || (su % 7) == 0){
+            //     console.log('3의 배수 또는 7의 배수이다');
+            // }
+            // else{
+            //     console.log('3의 배수도 7의 배수도 아니다');
+            // }
+            let su = 21;
+            let tr = su % 3 == 0;
+            if(tr){
+                console.log('3의 배수');
+            }
+
+            //스위치문
+            let code = 5;
+            let dept = ''; //변수초기값
+            switch(code){
+                case 1:
+                    dept = '관리부';
+                    break;
+                case 2:
+                    dept = '영업부';
+                    break;
+                case 3:
+                    dept = '품관부';
+                    break;
+                case 4:
+                    dept = '전산실';
+                    break;
+                default :
+                    dept = '생산부';     
+            }
+            console.log(`부서는 ${dept}`);
+
+            //삼항연산자
+            (num % 2 == 0) ? alert('짝수'): alert('홀수');
+        </script>
+    </body>
+</html>

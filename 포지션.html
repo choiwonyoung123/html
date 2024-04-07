@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>포지션</title>
+        <style>
+            div{
+                width: 50px;
+                height: 50px;
+                border: 1px solid #ccc;
+                text-align: center;
+                line-height: 50px; /*세로 가운데*/
+                margin: 5px;
+            }
+            div#container{
+                width: 500px;
+                height: 500px;
+                margin: 0 auto;
+            }
+            #b1{
+                background: red;
+                /*visibility: hidden; 숨김 처리*/
+                opacity: 0.4;
+                /* display: none; */
+            }
+            #b2{
+                background: green;
+                width: 200px;
+                position: relative; /*포지션 지정*/
+                top: -30px; /*위로 이동*/
+                left: 30px; /*오른쪽 이동*/
+            }
+            #b3{
+                background: yellow;
+                width: 300px;
+                height: 300px;
+                position: relative;
+            }
+            #b4{
+                background: blue;
+                border-radius: 50%;
+                color: white;
+                bottom: 20px;
+                right: 50px;
+                position: fixed;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            .bc-color{
+                background: green;
+                position: absolute; /*포지션 지정*/
+            }
+            #bc1{
+                left: 100px;
+                top: 125px;
+                background: red;
+                z-index: 10; /*요소순서*/
+            }
+            #bc2{
+                right: 0;
+                top: 0;
+            }
+            #bc3{
+                left: 0;
+                bottom: 0;
+            }
+            #bc4{
+                right: 120px;
+                bottom: 100px;
+                background: black;
+                z-index: 20; /*요소순서*/
+            }
+            #bc5{
+                top: 125px;
+                left: 125px;
+                z-index: 999; /*요소순서*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="b1">box1</div>
+            <div id="b2">box2</div>
+            <div id="b3">box3
+                <div class="bc-color" id="bc1">bc1</div>
+                <div class="bc-color" id="bc2">bc2</div>
+                <div class="bc-color" id="bc3">bc3</div>
+                <div class="bc-color" id="bc4">bc4</div>
+                <div class="bc-color" id="bc5">bc5</div>
+            </div>
+            <div id="b4"><a href="container">top</a></div>
+        </div>
+    </body>
+</html>

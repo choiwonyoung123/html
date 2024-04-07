@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>체크리스트</title>
+    <link href="css/도서목록.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2> 권장 도서 목록</h2>
+      <form>
+        <input type="text" id="book" name="book" autofocus>
+        <button type="button" id="add" name="add" class="addBtn" >추가</button>
+      </form>
+      <div id="bookList"></div>
+    </div>
+    <!-- <script src="js/도서목록.js"></script> -->
+    <script>
+
+      // 1. 요소에 접근
+      let book = document.querySelector('#book'); //책 입력란
+      let addButton = document.querySelector('#add'); //추가 버튼
+
+      // 2. 저장할 배열 생성
+      let books = [];
+      
+      // 3. 이벤트 연결
+      addButton.onclick = addbook;
+
+      // 4. 배열에 데이터 저장
+      function addbook(){
+          if(book.value == ''){ //입력란이 공백이면
+            alert('책 제목을 입력하세요.');
+            book.focus();
+          }
+          else if(books.indexOf(book.value) != -1){ //배열에 중복이 있으면
+            alert('이미 있는 책입니다.');
+            book.value = '';
+            book.focus();
+          }
+          else{
+            books.push(book.value);
+            book.value = '';
+            book.focus();
+            printbook();
+          }
+      }
+
+      // 5. 화면에 출력 - 배열의 요소 - <ul><li>
+      function printbook(){
+        //div 태그 안에 들어갈 ul 및 li 태그 정의
+        let blist = '<ul>';
+        for(let i in books){ //배열에 모든 요소 순환
+          blist += `<li>${books[i]}<span class='del' id='${i}'>삭제</span></li>`;
+        }
+        blist += '</ul>';
+        document.querySelector('#bookList').innerHTML = blist;
+        //ul 태그 밑에 있는 li 값들을 반복문을 활용해서 삽입
+        //ul 태그 닫기
+        let delLists = document.querySelectoraLL('.del'); //모든 del 클래스 요소에 접근하기 위한 변수 선언
+        for(let ele of delLists){ //모든 delList 배열 요소에 대해 
+          ele.onclick = delf; //요소가 클릭되었을때 delf 이벤트 실행
+        }
+      }
+      
+      // 6. 배열에 항목 삭제
+      function delf(){ //목록 삭제 함수
+        let delIndex = this.getAttribute('id'); //속성이 id인 것 
+        books.splice(delIndex, 1); //현재 index번호에서 1개 요소 삭제
+        show(); //목록 출력 함수 실행
+      }
+    </script>
+  </body>
+</html>

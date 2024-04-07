@@ -1,0 +1,71 @@
+#container{
+    width: 960px;
+    margin: 0 auto;
+}
+header{
+    background: rgb(248, 42, 77);
+    overflow: hidden;
+}
+header h1{
+    color: white;
+    float: left;
+}
+header a{
+    color: white;
+}
+header li{
+    display: inline-block;
+    padding: 30px;
+}
+header ul{
+    list-style-type: none;
+    text-align: right;
+}
+section{
+    border: 5px solid #bbb;
+}
+section ol{
+    list-style-type: lower-alpha;
+}
+.accent{
+    font-weight: bold;
+}
+article{
+    display: inline-block; /*아티클 인라인블록설정*/
+}
+#art1{
+    float: left;
+    width: 250px;
+    height: 300px;
+    padding: 30px;
+}
+#art2{
+    width: 250px;
+    height: 300px;
+    float: left;
+    padding: 30px;
+}
+#art3{
+    width: 250px;
+    height:300px;
+    float: right;
+    padding: 30px;
+}
+#art4{
+    float: left;
+    width: 600px;
+    height: 250px;
+    padding: 20px;
+}
+img{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+footer{
+    clear: both;
+    background: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

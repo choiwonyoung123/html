@@ -1,0 +1,46 @@
+#container{
+    width: 960px;
+    margin: 0 auto;
+}
+header{
+    background: blue;
+    overflow: hidden;
+}
+header h1{
+    float: left;
+    color: white;
+}
+header li{
+    display: inline-block;
+    padding: 30px;
+}
+header ul{
+    text-align: right;
+    list-style-type: none; /*불릿 없애기*/
+}
+a{
+    color: white;
+    text-decoration: none;   
+}
+section{
+    border: 5px solid rgb(112, 112, 250);
+    padding: 20px;
+}
+section li{
+    line-height: 50px; /*줄간격*/
+}
+section ol{
+    list-style-type: lower-roman; /*로마숫자*/
+}
+img{
+    float: right; /*이미지 오른쪽 띄우기*/
+    width: 300px;
+    height: 490px;
+}
+footer{
+    clear: both;
+    background: blue;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}

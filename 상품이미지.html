@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>상품소개</title>
+        <style>
+            #container{
+                width: 80%;
+                margin: 0 auto;
+            }
+            img{
+                width: 300px;
+                height: 200px;
+            }
+            ul li{
+                list-style: none; /*불릿 삭제*/
+                position: relative; /*리스트 포지션*/
+                overflow: hidden;
+                margin: 10px;
+            }
+            .cap{
+                width: 300px;
+                height: 200px;
+                background: rgba(0, 0, 0, 0.5); /*cap 배경*/
+                position: absolute; /*cap 포지션*/
+                top: 200px; /*높이 200px 만큼 이동*/
+                text-align: center;
+                color: white;
+                opacity: 0; /*cap 빈자리 투명하게*/
+                z-index: 10; /*cap 순서 위로 올리기*/
+            }
+            ul li:hover .cap{
+                transform: translateY(-200px); /*마우스 올렸을때 cap을 200px 만큼 위로 이동*/
+                opacity: 1; /*cap 보이게*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <ul>
+                <li>
+                    <img src="img/레드향.jpg" alt="레드향">
+                    <div class="cap">
+                        <h1>상품명</h1>
+                        <h3>상품설명</h3>
+                        <h4>가격: 12,345원</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/레드향.jpg" alt="레드향">
+                    <div class="cap">
+                        <h1>상품명</h1>
+                        <h3>상품설명</h3>
+                        <h4>가격: 12,345원</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

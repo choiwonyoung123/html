@@ -1,0 +1,36 @@
+#container{
+    width:600px;
+    margin: 0 auto; /*첫번째:위아래, 두번째: 좌우*/
+}
+img{
+    width: 600px;
+}
+h1{
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    text-indent: 14px; /*앞 한 글자 들여쓰기*/
+    line-height: 28px; /*세로 줄 간격 지정*/
+    text-align: left;
+    margin-top: 0;
+}
+h2{
+    color: red;
+    font-size: 18px;
+    font-weight: 800;
+}
+#check{
+    text-align: center;
+    border: 1px solid #ccc;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2.5; /*세로 줄 간격 지정*/
+}
+.textblue{ /*p태그에서 강조하기 싶은 부분을 같은 클래스로 만들어서 스타일 지정*/
+    color: blue;
+}
+.textsmall{
+    font-size: small;
+}

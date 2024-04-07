@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>프로필</title>
+        <style>
+            /* ul{
+                color: blue;
+                background-color: yellow;
+                margin: 10px;
+            }
+            ul li{
+                background-color: burlywood;
+                margin: 10px;
+            } */
+            table{
+                width: 90%;
+                border: 1px solid grey;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            th,td{
+                border: 1px solid grey;
+                padding: 5px;  
+            }
+            thead{
+                background-color: #e26161;
+            }
+            #container{
+                width: 960px;
+                margin: 0 auto;
+            }
+            aside{
+                background: #ddd;
+                float: left;
+                padding: 20px;
+                width: 200px;
+                height: 600px;
+            }
+            aside img{
+                width: 200px;
+                height: 200px;
+            }
+            aside li{
+                list-style-type: none;
+                display: inline-block;
+                padding-right: 10px;
+            }
+            aside a{
+                text-decoration: none;
+            }
+            .spacing{
+                margin-top: 50px;
+            }
+            section{
+                float: right;
+                width: 700px;
+            }
+            section table{
+                width: 700px;
+            }
+            section h1, h3{
+                text-indent: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <aside>
+                <!--온라인프로필 예제작성-->
+                <img src="img/앤.jpg" alt="빨간머리 앤" title="빨간머리 앤">
+                <h2>scallet</h2>
+                <p>죽음이라 쓰고 삶이라 읽는다...</p>
+                <p class="spacing">Daegu, Korea</p>
+                <p>scallet@gmail.com</p>
+                <h1 class="spacing">SNS</h1>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" title="페이스북으로 이동" target="_blank">facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" title="트위터로 이동" target="_blank">twitter</a>
+                    </li>
+                </ul>
+            </aside>
+            <section>
+                <h1>Who am I?</h1>
+                <p>
+                    <mark>프런트엔드 웹 기술(Front-end Web Tech.)</mark>에 관심이 많습니다.<br>
+                    현재 제주의 한 시골 마을에서 코딩 중입니다.
+                </p>
+                <hr>
+                <!--경력-->
+                <h3>Experience</h3>
+                <ul>
+                    <li>프런트엔드 개발
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>javascript</li>
+                        </ul>
+                    </li>          
+                    <li>웹 디자인
+                        <ul>
+                            <li>photoshop</li>
+                            <li>illustrator</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <!--기술-->
+                <h3>Skills</h3>
+                <hr>
+                <!--학력-->
+                <h3>Education</h3>
+                <table>
+                    <caption>학력 사항</caption>
+                    <thead>
+                        <tr>
+                            <th>출신대학</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>□□대학교</td>
+                            <td>컴퓨터공학</td>
+                            <td>2004.3 ~ 2008.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>○○○고등학교</td>
+                            <td>-</td>
+                            <td>2001.3 ~ 2004.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </section>
+            <!--자기소개-->
+            
+        </div>
+    </body>
+</html>

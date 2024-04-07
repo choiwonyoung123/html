@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>도전문제</title>
+    </head>
+    <body>
+        <h3>도전문제</h3>
+        <script> //자바스크립트
+            //사각형 너비
+            let inputw = prompt('사각형의 가로: '); //prompt로 가로 입력받기
+            let inputh = prompt('사각형의 세로: '); //prompt로 세로 입력받기
+            let area = inputw * inputh; //너비 구하기
+            console.log(`가로: ${inputw} * 세로: ${inputh} = 너비: ${area}`);
+
+            //나이 계산
+            let inputy = prompt('태어난 연도를 입력하세요: ','2000'); //prompt로 나이 입력받기
+            let age = 2024 - inputy + 1; //태어난 연도 계산하기
+            console.log(`태어난 연도는 ${inputy}년이고, 나이는 ${age}살입니다.`);
+
+            //불리언
+            console.log(false != 'false'); //불리언타입은 벗겨지지 않음
+            console.log(false !== 'false'); //불리언타입은 벗겨지지 않음
+            console.log(typeof(123));
+
+            //스위치문제 요일
+            let input = Number(prompt('수를 입력하세요:'));
+            let day = '';
+            switch(input % 7){
+                case 0:
+                    day = '일요일'; break;
+                case 1:
+                    day = '월요일'; break;
+                case 2:
+                    day = '화요일'; break;
+                case 3:
+                    day = '수요일'; break;
+                case 4:
+                    day = '목요일'; break;
+                case 5:
+                    day = '금요일'; break;
+                case 6:
+                    day = '토요일'; break;
+                default: 
+                    console.log('범위를 벗어났습니다.');
+            }
+            console.log(day);
+
+            //삼항연산자 판매 가능/불가능
+            let input2 = Number(prompt('나이를 입력하세요:'));
+            (input2 >= 18) ? alert(input2+'살입니다. 판매가능!') : alert('18세 미만입니다. 판매불가!');
+ 
+        </script>
+    </body>
+</html>

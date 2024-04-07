@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>내장객체</title>
+    </head>
+    <body>
+        <h3>내장객체</h3>
+        <script>
+            //날짜객체
+            let now = new Date();
+            console.log(now);
+            console.log(now.getTime());
+            let xmax = new Date("2024-12-25");
+            console.log(xmax);
+            let xmax2 = new Date(2024,11,25);
+            console.log(xmax2);
+            let remain = (xmax - now) / 1000 / 60 / 60 / 24;
+            console.log(Math.floor(remain) + "일");
+            let start = new Date(1);
+            console.log(start);
+            let by = 2000;
+            console.log(now.getFullYear() - by);
+            let by2 = 1997;
+            console.log(now.getMonth() + 1 + "월");
+            console.log(now.getDay() + '요일');
+            console.log(now.toLocaleString());
+
+
+            //과정시작일~오늘까지 몇일 째인지
+            let now2 = new Date();
+            let start2 = new Date("2023-12-25");
+            let period = ((now2 - start2) / 1000 / 60 / 60 / 24)+1;
+            console.log(`오늘은 개강한지 ${Math.floor(period)}일째`);
+            let day = '';
+            switch(start2.getDay()){
+                case 0:
+                    day = '일요일'; break;
+                case 1:
+                    day = '월요일'; break;
+                case 2:
+                    day = '화요일'; break;
+                case 3:
+                    day = '수요일'; break;
+                case 4:
+                    day = '목요일'; break;
+                case 5:
+                    day = '금요일'; break;
+                case 6:
+                    day = '토요일'; break;
+                default :
+                    day = '오류';      
+            }
+            console.log(`개강한 요일은 ${day}`);
+
+            //6개월뒤 날짜
+            console.log(new Date(2023, 11+6, 25));
+            
+            
+            //로또번호 중복 발생
+            // let lotto = '';
+            // for(let i = 0; i < 5; i++){
+            //     for(let j = 0; j < 6; j++){
+            //         let num = Math.floor(Math.random()*45)+1;
+            //         lotto += num + '\t';
+            //     }
+            //     lotto += `\n`;
+            // }
+            // console.log(lotto);
+
+            //로또번호 중복x 발생 match() or search()
+            for(let i = 0; i < 5; i++){
+                let lotto = '';
+                for(let j = 0; j < 6; j++){
+                    let num = Math.floor(Math.random()*45)+1;
+                    if(lotto.match(num.toString()) == null){
+                        lotto += num + '\t';
+                    }
+                    else{
+                        j--;
+                    }
+                }
+                console.log(lotto);
+                // lotto = ``;
+            }
+        </script>
+    </body>
+</html>

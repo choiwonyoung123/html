@@ -1,0 +1,96 @@
+/* <link href="CSS/애완견종류.CSS" rel="stylesheet"> */
+/*-----콘테이너 스타일-----*/
+#container{ 
+    width: 960px;
+    margin: 0 auto; 
+}
+/*a태그 스타일*/
+a{ 
+    text-decoration: none;
+}
+/*-----헤더 스타일-----*/
+header{ 
+    /* background-color: rgb(41, 78, 243); */
+    background: linear-gradient(90deg, blue, green);
+}
+header ul{
+    text-align: right;
+    margin-bottom: 0px; /*헤더 아래쪽 마진 0*/
+}
+header li{
+    display: inline-block;
+    margin: 30px;
+}
+header a{
+    color: white;
+}
+/*-----섹션 스타일-----*/
+section{ 
+    background-color: rgb(253, 217, 223);
+    padding-top: 10px; /*섹션 위쪽 패딩 추가 -> 영역 더 넓어짐*/
+    padding-bottom: 10px; /*섹션 아래쪽 패딩 추가 -> 영역 더 넓어짐*/
+}
+section h2{
+    margin-left: 20px;
+}
+section ul{
+    text-align: center;
+}
+section li{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    font-weight: bold;
+}
+section p{
+    text-align: right;
+    margin-right: 30px;
+}
+/*-----아티클 스타일-----*/
+#article1{ 
+    border: 3px solid purple;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#article2{
+    border: 3px dotted green;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#article3{
+    border: 3px dashed rgb(122, 20, 122);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+article h3{
+    margin-left: 40px;
+}
+/*-----피규어 스타일-----*/
+figure{ 
+    text-align: center;
+}
+figure img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+/*-----어사이드 스타일-----*/
+aside{ 
+    background-color: pink;
+    padding: 10px;
+    margin-top: 10px; /*어사이드 위쪽 마진 추가 -> 바깥쪽 띄우기*/
+    margin-bottom: 10px; /*어사이드 아래쪽 마진 추가 -> 바깥쪽 띄우기*/
+}
+/*-----푸터 스타일-----*/
+footer{ 
+    background-color: rgb(49, 73, 209);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}

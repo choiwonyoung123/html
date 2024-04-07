@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>강아지용품</title> <!--container= 너비960px / 위마진0 / 좌우마진자동-->
+        <style>
+            #container{
+                width: 960px;
+                margin: 0 auto; 
+            }
+            header{
+                background: purple;
+                padding: 10px;
+                overflow: hidden; /*헤더 넘치는 부분 숨기기*/
+            }
+            header img{
+                width: 80px;
+                height: 80px;
+                float: left;
+            }
+            header nav{
+                width: 580px;
+                float: right;
+            }
+            header nav ul li{
+                float: left;
+                list-style: none;
+                padding: 10px 20px;
+            }
+            header nav ul li a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+            /*-----레이아웃-----*/
+            /*
+            1- 섹션과 어사이드 너비 나누기
+            2- 섹션에 있는 아티클의 너비, 패딩, 마진 지정
+            3- 어사이드에 있는 이미지의 너비 지정
+            4- 어사이드 위쪽 마진 지정
+            5- 섹션에 있는 아티클의 높이 지정
+            6- 아티클과 이미지의 높이 비교
+            */
+            section{
+                float: left; /*섹션 띄우기*/
+                width: 734px; /*섹션 너비*/
+            }
+            article{
+                float: left; /*아티클 띄우기*/
+                border: 1px solid #ccc;
+                width: 320px; /*아티클 너비 320*/
+                height: 280px; /*아티클 높이 280*/
+                padding: 20px; /*아티클 패딩 20씩*/
+                margin-right: 5px; /*아티클 오른쪽 마진 5*/
+                margin-bottom: 5px; /*아티클 아래쪽 마진 5*/
+                text-align: justify; /*텍스트 양쪽정렬*/
+            }
+            article p{
+                text-indent: 10px; /*텍스트 들여쓰기*/
+                line-height: 1.5; /*텍스트 줄간격*/
+            }
+            aside{
+                /*float: right; 어사이드 띄우기*/
+                /*width: 226px; 어사이드 너비*/
+                margin-top: 72px; /*어사이드 위쪽 마진*/
+            }
+            aside img{
+                width: 226px; /*어사이드 이미지 너비*/
+                height: 214px; /*어사이드 이미지 높이*/
+            }
+            footer{
+                clear: both; /*플로트 해제*/
+                background-color: rgb(65, 65, 243);
+                padding: 20px;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"> <!--콘테이너영역-->
+            <header> <!--헤더영역-->
+                <img src="img/레드향.jpg" alt="로고">
+                <nav> <!--내비영역-->
+                    <ul>
+                        <li>
+                            <a href="애완견종류.html">애완견 종류</a>
+                        </li>
+                        <li>
+                            <a href="강아지용품.html">강아지용품</a>
+                        </li>
+                        <li>
+                            <a href="건강돌보기.html">건강돌보기</a>
+                        </li>
+                        <li>
+                            <a href="더불어살기.html">더불어살기</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section> <!--섹션영역-->
+                <h1>강아지 용품 준비하기</h1>
+                <article> <!--기사-->
+                    <h3>강아지 집</h3>
+                    <p>
+                        강아지가 편히 쉴 수 있는 포근한 집이 필요합니다. 강아지의 집은 강아지가 다 큰 후에도 계속 쓸 수 있는 집으로 구입하세요. 
+                        집을 구입하실 때는 박음질이 잘 되어 있는지, 세탁이 간편한 제품인지 꼭 확인하시고 고르시는 것이 좋습니다.
+                    </p>
+                </article>
+                <article> <!--기사-->
+                    <h3>강아지 먹이</h3>
+                    <p>
+                        강아지의 먹이는 꼭 어린 강아지용으로 나와있는 사료를 선택하세요. 강아지들은 사람에 비해 성장속도가 8배 정도 빠르답니다. 
+                        따라서 강아지에게는 성장속도에 맞는 사료를 급여하셔야 합니다. 사람이 먹는 음식을 먹게 되면 양념과 향신료에 입맛이 익숙해지고, 
+                        비만이 될 가능성이 매우 높아집니다. 강아지용 사료는 생후 12개월까지 급여하셔야 합니다.
+                    </p>
+                </article> 
+                <article> <!--기사-->
+                    <h3>밥그릇, 물병</h3>
+                    <p>
+                        밥그릇은 쉽게 넘어지지 않도록 바닥이 넓은 것이 좋습니다. 물병은 대롱이 달린 것으로 선택하세요. 밥그릇에 물을 주게 되면 
+                        입 주변에 털이 모두 젖기 때문에 비위생적으로 대롱을 통해서 물을 먹을 수 있는 물병을 마련하시는 것이 좋습니다.
+                    </p>
+                </article> 
+                <article> <!--기사-->
+                    <h3>이름표, 목줄</h3>
+                    <p>
+                        강아지를 잃어버릴 염려가 있으니 산책할 무렵이 되면 이름표를 꼭 목에 걸어주도록 하세요. 그리고 방울이 달린 목걸이를 하고자 
+                        하실 때는 신중하셔야 합니다. 움직일 때마다 방울이 딸랑 거리면 신경이 예민한 강아지들에게는 좋지 않은 영향을 끼칠 수 있기 
+                        때문입니다.
+                    </p>
+                </article> 
+            </section>
+            <aside> <!--사이드바영역-->
+                <img src="img/강아지1.jpg" title="강아지1">
+                <img src="img/강아지2.jpg" title="강아지2">
+                <img src="img/강아지3.jpg" title="강아지3">
+            </aside>
+            <footer> <!--푸터영역-->
+                <p><i>대구 중구 예담직업전문학교 tel: 123-1234</i></p>
+            </footer>
+        </div>
+    </body>
+</html>

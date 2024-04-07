@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>첫 페이지</title>
+        <style>
+            thead{
+                background-color: pink;
+            }
+            tbody{
+                text-align: center;
+                color: blue;
+            }
+            tfoot{
+                background-color: gray;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#list">목록태그</a>
+        <a href="#table">표태그</a>
+        <a href="#img">이미지태그</a>
+        <a href="#outfile">외부파일삽입태그</a>
+        <h1>문서작업 :<ruby>學習<rt>학습</rt></ruby></h1>
+        <h2>수식: x<sup>2</sup>+y<sup>2</sup>=z<sup>2</sup></h2>
+        <h4>물의 화학식: H<sub>2</sub>O</h4>
+        <p>내용</p>
+        <s>취소선</s>
+        <u>밑줄</u>
+        <small>lorem</small>
+        <h3><kdd>F5</kdd>: 새로고침 <abbr title="Internet of Things">IoT</abbr></h3>
+        <p><strong>Lorem</strong> <b><i>ipsum</i></b>  dolor, sit amet consectetur adipisicing elit. <br>
+            Praesentium <small><small>provident</small></small> aut eveniet ad culpa repellat omnis 
+            commodi, tempore nihil soluta vitae placeat molestiae 
+            quaerat distinctio maiores exercitationem ipsam qui nobis.</p>
+        <div style="color: blue">
+            <pre>   문서작업   문서작업2   내용입력   </pre>
+        </div>
+        <p><em><b>Lorem, ipsum</b></em> dolor sit amet consectetur adipisicing elit. <br>
+            <blockquote><mark>Assumenda eveniet fugiat</mark> sit veritatis praesentium 
+                <span style="color:red">laudantium</span> <div style="color:blue">exercitationem</div> recusandae, vero debitis et 
+                nulla dolores, dolor, facere esse sapiente rerum non beatae 
+                modi.</blockquote></p>
+        <hr>
+        <h3 id="list">목록 만들기</h3>
+        <h4>순서 없는 목록: ul</h4>
+        <ul>
+            <li>사과</li>
+            <li>오렌지</li>
+            <li>딸기</li>
+            <li>망고</li>
+        </ul>
+        <h4>순서 있는 목록: ol</h4>
+        <ol type="I">
+            <li>냉장고 문을 연다</li>
+            <ul>
+                <li>코끼리가 크면 코끼리를 작게 한다</li>
+                <li>냉장고를 큰 것으로 준비한다</li>
+            </ul>
+            <li>코끼리 넣는다</li>
+            <li>냉자고 문을 닫는다</li>
+        </ol>
+        <h3>설명목록</h3>
+        <dl>
+            <dt>html</dt> <!--웹문서-->
+            <dd>>웹문서를 작업하는 언어</dd>
+            <dt>css</dt>
+            <dd>>웹문서를 보기 좋게 디자인하는 언어</dd>
+            <dt>javascript</dt>
+            <dd>>정적 사이트에 동적인 요소를 추가하기 위한 언어</dd>
+            <dd>>사용자의 동작에 반응하는 작업</dd>
+        </dl>
+        <h3>주석 달기</h3>
+        <!--주석 달기-->
+        <h3 id="table">표 작성</h3>
+        <table border="1">
+            <caption>파라다이스 객실</caption>
+            <colgroup>
+                <col span="2" style="background-color: green"> <!--1열,2열-->
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>방이름</th>
+                    <th>대상</th>
+                    <th>크기</th>
+                    <th>가격</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>핑크방</td>
+                    <td>여성</td>
+                    <td rowspan="3">4인실</td>
+                    <td rowspan="4">1인 20,000원</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">보라방</td>
+                    <td>동성</td>
+                </tr>
+                <tr>
+                    <td>가족1팀</td>
+                </tr>
+                <tr>
+                    <td>그린방</td>
+                    <td> - </td>
+                    <td>2인실</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">바깥채 전체를 렌트합니다.</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h3 id="img">이미지 삽입</h3>
+        <figure>
+            <img src="img/레드향.jpg" alt="레드향" width="100" height="100" title="레드향 이미지">
+            <img src="img/레드향.jpg" alt="레드향" width="100" height="100">
+            <img src="img/레드향.jpg" alt="레드향" width="100" height="100">
+            <img src="img/레드향.jpg" alt="레드향" width="100" height="100">
+            <!-- <img src="../img2/풋사과.jpg" alt="풋사과" width="100" height="100">  -->
+            <figcaption>잠을 깨우는 레드향</figcaption>
+        </figure>
+        <h3>오디오 파일 삽입</h3>
+        <audio src="img/미소속에비친그대.mp3" width="500" height="400" controls></audio>
+        <h3>비디오 파일 삽입</h3>
+        <video src="img/사랑한다사랑해.mp4" width="500" height="400" controls autoplay></video>
+        <h3>유튜브 삽입</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rNHI12EfB8E?si=yjrHjkwhpggqxtus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3 id="outfile">외부 파일 삽입 - object</h3>
+        <object data="img/예제작성.pdf" width="400" height="600"></object>
+        <embed src="img/예제작성.pdf" width="400" height="600"> 
+        <iframe src="img/예제작성.pdf" width="400" height="600"></iframe>
+        <h3>링크 연결</h3>
+        <a href="https://www.naver.com" title="네이버로 이동" target="_blank">네이버</a>
+        <a href="표.html">표</a>
+        <a href="img/레드향.jpg" download>이미지</a>
+    </body>
+</html>

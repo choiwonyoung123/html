@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+    <style>
+        #container{
+            width: 600px;
+            margin: 0 auto;
+        }
+        form ul li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        form label{
+            width: 100px;
+            /* display: inline-block; */
+            float: left;
+        }
+        fieldset{
+            margin-bottom: 10px;
+        }
+        form legend{
+            font-weight: bold;
+        }
+        .border_none{
+            border: none;
+            text-align: center;
+        }
+        .border_none input{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background: yellowgreen;
+            font-weight: bold;
+        }
+        button{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background: yellowgreen;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="aaa.jsp" method="post" name="login">
+            <fieldset>
+                <legend>로그인 정보</legend> <!--제목-->
+                <ul>
+                    <li>
+                        <label for="u_id">아이디</label>
+                        <input type="text" id="u_id" name="u_id">
+                    </li>
+                    <li>
+                        <label for="pw">비밀번호</label>
+                        <input type="password" id="pw" name="pw">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>회원가입 정보</legend>
+                <ul>
+                    <li>
+                        <label for="u_name">이름</label> <!--이름에 맞는 인풋의 타입이 text??-->
+                        <input type="text" id="u_name" name="name" autofocus>
+                    </li>
+                    <li>
+                        <label for="u_url">홈페이지</label>
+                        <input type="url" id="u_url" name="u_url">
+                    </li>
+                    <li>
+                        <label for="u_mail">이메일</label>
+                        <input type="email" id="u_mail" name="u_mail">
+                    </li>
+                    <li>
+                        <label for="u_tel">연락처</label>
+                        <input type="tel" id="u_tel" name="u_tel" placeholder="-빼고 숫자만 입력하세요"> <!--tel 은 폰으로 봤을때 숫자키패드 띄움-->
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>기타정보</legend>
+                <ul>
+                    <li>
+                        <label for="search">검색</label>
+                        <input type="search" id="search" name="search ">
+                    </li>
+                    <li>
+                        <label for="file">파일전송</label>
+                        <input type="file" id="file" name="file">
+                    </li>
+                    <li>
+                        <label for="color">색상선택</label>
+                        <input type="color" id="color" name="color" value="#ff0000">
+                    </li>
+                    <li>
+                        <label>지원동기</label>
+                        <textarea rows="5" cols="60" placeholder="지원동기 간략히 적어주세요"></textarea><!--띄워쓰기도 자료로 인식-->
+                    </li>
+                    <li>
+                        <label>필독내용</label>
+                        <textarea rows="3" cols="30" readonly >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem officia laudantium reprehenderit sed placeat vero facere sequi temporibus tenetur! Asperiores temporibus maiores sint perferendis id. Necessitatibus neque esse porro accusantium.</textarea>
+                    </li>
+                    <li>
+                        <label for="col">드롭다운</label>
+                        <select id="col" size="5" multiple>
+                            <optgroup label="따뜻한 색">
+                                <option value="red">빨강</option>
+                                <option value="orange" selected>주황</option>
+                                <option value="pink">분홍</option>
+                            </optgroup>
+                            <optgroup label="차가운 색">
+                                <option value="pink">파랑</option>
+                                <option value="pink">하늘</option>
+                                <option value="pink">남색</option>
+                            </optgroup>
+                        </select>
+                        <li>
+                            <label>d리스트</label>
+                            <input type="text" list="datalist">
+                            <datalist id="datalist">
+                                <option value="fb">페이스북</option>
+                                <option value="tw">트위터</option>
+                                <option value="int" label="인스타그램"></option>
+                            </datalist>
+                        </li>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>선택 타입</legend>
+                <ul>
+                    <li>
+                        <label>색상선택 : </label>
+                        <label><input type="radio" name="color" value="red">빨강</label>
+                        <label><input type="radio" name="color" value="blue" checked>파랑</label>
+                        <label><input type="radio" name="color" value="purple">보라</label>
+                    </li>
+                    <li>
+                        <label>sns : </label>
+                        <label><input type="checkbox" name="sns" value="facebook">페이스북</label>
+                        <label><input type="checkbox" name="sns" value="instagram" checked>인스타그램</label>
+                        <label><input type="checkbox" name="sns" value="twitter">트위터</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>숫자타입</legend>
+                <ul>
+                    <li>
+                        <label for="num">스핀박스</label>
+                        <input type="number" id="num" name="num" min="1" max="5" step="2" value="1"><!--증가치 step 상자에서 value는 초기값 다른곳에서는 서버에 넘어갈 값-->
+                    </li>
+                    <li>
+                        <label for="sld">슬라이드</label>
+                        <input type="range" id="sld" name="sld" min="1" max="5" value="2">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>날짜타입</legend>
+                <ul>
+                    <li>
+                        <label for="dt">날짜시간</label>
+                        <input type="datetime-local" id="dt" name="dt">
+                    </li>
+                    <li>
+                        <label for="date">날짜</label>
+                        <input type="date" id="date" name="date">
+                    </li>
+                    <li>
+                        <label for="wk">주</label>
+                        <input type="week" id="wk" name="wk">
+                    </li>
+                    <li>
+                        <label for="md">월</label>
+                        <input type="month" id="md" name="md">
+                    </li>
+                    <li>
+                        <label for="t">시간</label>
+                        <input type="time" id="t" name="t">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="border_none">
+                <!-- <input type="submit" value="전송버튼"> -->
+                <button type="submit">전송버튼</button>
+                <input type="reset" value="취소버튼">
+                <button type="button" onclick="window.open()">창 열기</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
